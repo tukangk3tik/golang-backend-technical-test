@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  mariadb:
+    container_name: golang-test
+    image: mariadb:10.1.44
+    restart: "no"
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass123
+      - MYSQL_DATABASE=golang_test_db
+    volumes:
+      - ./db-mariadb:/var/lib/mysql
+      - ./sql:/root/sql
+    ports:
+      - "3306:3306"

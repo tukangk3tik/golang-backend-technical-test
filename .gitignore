@@ -1,0 +1,5 @@
+
+.idea/*
+db-mariadb/*
+**/.DS_Store
+.env

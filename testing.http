@@ -1,0 +1,47 @@
+### Login
+POST http://localhost:9090/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "felix123@mail.com",
+  "password": "123456"
+}
+
+> {% client.global.set("auth_token", response.body.data.access_token); %}
+
+
+### Balance
+GET http://localhost:9090/api/user/balance
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+
+
+### TopUpBalance
+POST http://localhost:9090/api/user/balance/top-up
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "amount": 50
+}
+
+
+### Transfer
+POST http://localhost:9090/api/user/balance/transfer
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "to": "yan321",
+  "amount": 200
+}
+
+
+### Logout
+POST http://localhost:9090/api/auth/logout
+Authorization: Bearer {{auth_token}}
+Content-Type: application/json
+Accept: application/json
