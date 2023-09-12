@@ -1,35 +1,35 @@
-# Golang REST API
+# Privy ID Test Golang REST API - 26 Oct 2022
 
-Daftar library yang digunakan:
+List of used library:
 - Gorm 
 - Gin Gonic 
 - Jwt
 - Godotenv
 
 
-Pertama, download semua library:
+First, download all library:
 
 ```sh
 go get 
 ```
 
-Lalu sesuaikan seluruh _environtment_ pada .env 
+Then, adjust all _environtment_ at .env 
 
 
-Kemudian jalankan file docker untuk database
+Next run the docker compose for create database
 
 ```sh
 docker-compose up
 ```
 
-Setelah database sudah running, kemudian build aplikasi dan jalankan dengan perintah berikut:
+After the database is running, then build the application and run it with the following command:
 
 ```sh
 go build
 ./privyid-golang-test
 ```
 
-Sekarang, gunakan HTTP client (seperti [Postman](https://www.getpostman.com/apps)) dan hit api utk login:
+Now, use an HTTP client (like [Postman](https://www.getpostman.com/apps)) and hit login endpoint:
 
 ```
 POST http://localhost:9090/api/auth/login
@@ -51,7 +51,7 @@ Response:
 }
 ```
 
-Lalu tes kembali hit api utk top up balance:
+Then, hit user balance endpoint again to top up the balance:
 
 ```
 GET http://localhost:9090/api/user/balance
@@ -70,7 +70,7 @@ Response:
 
 Format header authorization: ```Authorization: Bearer <your_token>``` 
 
-Route yang tersedia:
+Route available:
 - ```(POST) /api/auth/login``` | Required body: email _(string)_, password _(string)_
 - ```(GET) /api/auth/logout``` | Required header: authorization 
 - ```(POST) /api/auth/balance``` | Required header: authorization 
