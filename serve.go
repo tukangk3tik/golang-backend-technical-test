@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"gitlab.com/tukangk3tik_/privyid-golang-test/config"
-	"gitlab.com/tukangk3tik_/privyid-golang-test/pkg/routes"
+	"gitlab.com/tukangk3tik_/golang-backend-technical-test/config"
+	"gitlab.com/tukangk3tik_/golang-backend-technical-test/pkg/routes"
 )
 
 func main() {
