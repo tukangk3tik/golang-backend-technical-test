@@ -1,4 +1,4 @@
-# Privy ID Test Golang REST API - 26 Oct 2022
+# Golang REST API - 26 Oct 2022
 
 List of used library:
 - Gorm 
@@ -26,7 +26,7 @@ After the database is running, then build the application and run it with the fo
 
 ```sh
 go build
-./privyid-golang-test
+./be-golang-test
 ```
 
 Now, use an HTTP client (like [Postman](https://www.getpostman.com/apps)) and hit login endpoint:
