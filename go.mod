@@ -1,4 +1,4 @@
-module gitlab.com/tukangk3tik_/privyid-golang-test
+module gitlab.com/tukangk3tik_/golang-backend-technical-test
 
 go 1.18
 
